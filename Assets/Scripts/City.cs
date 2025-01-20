@@ -27,6 +27,8 @@ public class City : MonoBehaviour
     public int maxPopulation;
     public int maxJobs;
     public int incomePerJob;
+    public int curHappy;
+    public int curControl;
 
     public TextMeshProUGUI statsText;
 
@@ -91,7 +93,12 @@ public class City : MonoBehaviour
         CalculatePopulation();
         CalculateJobs();
         CalculateFood();
+        foreach (Building building in buildings)
+        {
 
+            curHappy += building.preset.happy;
+            curControl += building.preset.control;
+        }
         UpdateStatsText();
     }
 
@@ -164,7 +171,7 @@ public class City : MonoBehaviour
 
     private void UpdateStatsText()
     {
-        statsText.text = string.Format("DAY:{0} MONEY:{1}€ POPULATION:{2}/{3} JOBS:{4}/{5} FOOD:{6}", new object[7] {day,money,curPopulation,maxPopulation,curJobs,maxJobs,curFood});
+        statsText.text = string.Format("DAY:{0} MONEY:{1}€ POPULATION:{2}/{3} JOBS:{4}/{5} FOOD:{6} HAPPY:{7} CONTROL: {8}", new object[9] {day,money,curPopulation,maxPopulation,curJobs,maxJobs,curFood,curHappy,curControl});
     }
 
     public void SpeedDayCycle(int factor)

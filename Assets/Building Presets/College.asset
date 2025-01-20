@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43c6aa58b081a4a4e82c107ff3c2a5a9, type: 3}
+  m_Name: College
+  m_EditorClassIdentifier: 
+  cost: 10
+  costPerTurn: 5
+  prefab: {fileID: 7343362035831810236, guid: 651e91d05de57e94286a026517ffabf5, type: 3}
+  population: 30
+  jobs: 0
+  food: 0
+  happy: 5
+  control: 2
